@@ -1,6 +1,6 @@
 import { setToken, getUserFromToken, removeToken } from './tokenService';
 
-// const BASE_URL = HEROKU APP 
+ const BASE_URL = 'http://localhost:3000';
 
 
 function signup(user) {
@@ -11,8 +11,9 @@ function signup(user) {
         },
         body: JSON.stringify(user)
     }).then(response => {
+        
         if(response.ok) return response.json();
-        throw new Error('Email already taken');
+        throw new Error(Error);
     }).then(({ token }) => setToken(token));
 }
 

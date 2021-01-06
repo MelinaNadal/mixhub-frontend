@@ -13,10 +13,10 @@ function formValid(){
     return !!(formState.name && formState.email && formState.password)
 }
 
-    function handleChange(evt){
+    function handleChange(event){
         setFormState(prevState => ({
             ...prevState,
-            [evt.target.name]:evt.target.value
+            [event.target.name]:event.target.value
         }))
 
     }
@@ -31,9 +31,7 @@ function formValid(){
             alert(error.message);
         }
     }
-
-
-    return(
+return(
         <main className="Page">
           <div className="transbox">
 

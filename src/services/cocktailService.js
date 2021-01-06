@@ -1,13 +1,6 @@
-fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php? i=${searchTerm}`, {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "c0f227240amsh55aa92563c9e45cp1e4b12jsn976987091817",
-		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-}); 
+const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php'
+function fetchCocktailData(searchTerm) {
+   return fetch(BASE_URL + '?s=' + searchTerm)
+    .then(res => res.json())
+}
+
