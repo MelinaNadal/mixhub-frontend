@@ -1,6 +1,6 @@
 import { setToken, getUserFromToken, removeToken } from './tokenService';
 
- const BASE_URL = 'http://localhost:3000/api/users';
+ const BASE_URL = 'http://localhost:3001/api/users';
 
 
 function signup(user) {
@@ -13,7 +13,7 @@ function signup(user) {
     }).then(response => {
         
         if(response.ok) return response.json();
-        throw new Error(Error);
+        console.log(Error);
     }).then(({ token }) => setToken(token));
 }
 
