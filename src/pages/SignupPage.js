@@ -13,16 +13,16 @@ function formValid(){
     return !!(formState.name && formState.email && formState.password)
 }
 
-    function handleChange(event){
+    function handleChange(evt){
         setFormState(prevState => ({
             ...prevState,
-            [event.target.name]:event.target.value
+            [evt.target.name]:evt.target.value
         }))
 
     }
 
-    async function handleSubmit(event) {
-        event.preventDefault();
+    async function handleSubmit(evt) {
+        evt.preventDefault();
         if(!formValid()) return;
         try {
             await signup(formState);
