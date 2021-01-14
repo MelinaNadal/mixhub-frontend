@@ -12,7 +12,7 @@ div.transbox {
 body {
     font-family:'Marcellus SC', serif;
     background-image: url('../imgs/cocktail.jpg');
-    background-size: cover;
+    background-size: 100%;
    
    
 }
