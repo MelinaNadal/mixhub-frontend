@@ -1,5 +1,6 @@
 .homepage-title {
     margin: 0;
+    background-color: azure;
 }
 
 .homepage-subtitle {
@@ -20,4 +21,7 @@
 
 .homepage-intro p {
     margin-bottom: 0;
+}
+body {
+    background-image: url('../imgs/curate.jpg');
 }

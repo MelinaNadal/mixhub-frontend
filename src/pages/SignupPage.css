@@ -1,3 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+div.transbox {
+    background-color: peachpuff;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: peru;
+    border-width: 5px;
+    color: rgb(124, 132, 143);
+}
+body {
+    font-family:'Marcellus SC', serif;
+    background-image: url('../imgs/cocktail.jpg');
+    background-size: cover;
+   
+   
+}
 .loginFooter {
     margin-top: 20px;
     color: rgb(115, 115, 115);

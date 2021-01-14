@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 .Page {
     margin: auto;
     width: 600px;
     padding: 50px;
-
+    font-family:'Marcellus SC', serif;
     text-align: center;
 }

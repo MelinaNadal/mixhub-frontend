@@ -3,7 +3,6 @@ import { setToken, getUserFromToken, removeToken } from './tokenService';
 const BASE_URL = 'http://localhost:3001/api/users';
 
 function signup(user) {
-    console.log('signup', user)
     return fetch(BASE_URL + '/signup', {
         method: 'POST',
         headers: {
@@ -11,13 +10,9 @@ function signup(user) {
         },
         body: JSON.stringify(user)
     }).then(response => {
-        // if(response.ok) 
-        return response.json();
-        // console.log(Error);
-    }).then((data)=>console.log('data',data)).then(({ token }) => 
-    {console.log('token', token);
-     setToken(token);})
-    
+        if(response.ok) return response.json();
+        throw new Error('Email already taken');
+    }).then(({ token }) => setToken(token));
 }
 
 function login(credentials) {
