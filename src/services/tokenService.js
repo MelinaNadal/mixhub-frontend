@@ -1,7 +1,11 @@
+
+
 function setToken(token) {
     if(token) {
+      console.log('token')
       localStorage.setItem('token', token);
     } else {
+      console.log('else')
       localStorage.removeItem('token');
     }
   }

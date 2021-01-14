@@ -1,7 +1,6 @@
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage';
-// import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import { getUser, logout } from './services/userService';
@@ -16,8 +15,12 @@ function App(props) {
 
   // helper functions
   function handleSignupOrLogin(){
+    console.log('1')
     setUserState({ user:getUser()})
-    props.history.push('./search')
+    console.log('2')
+    props.history.push('./searchpage')
+    console.log('3')
+
   }
 
   function handleLogout(){

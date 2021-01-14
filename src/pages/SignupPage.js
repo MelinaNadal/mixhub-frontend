@@ -1,6 +1,7 @@
 import{ signup } from '../services/userService'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import "./SignupPage.css";
 
 export default function SignupPage(props){
 
@@ -21,17 +22,21 @@ function formValid(){
 
     }
 
-    async function handleSubmit(evt) {
-        evt.preventDefault();
+    async function handleSubmit(event) {
+        event.preventDefault();
         if(!formValid()) return;
         try {
+          
             await signup(formState);
             props.handleSignupOrLogin()
+            
         } catch (error) {
             alert(error.message);
         }
     }
-return(
+
+
+    return(
         <main className="Page">
           <div className="transbox">
 

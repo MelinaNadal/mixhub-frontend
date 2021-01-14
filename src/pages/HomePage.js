@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./HomePage.module.css";
 
 
 export default function HomePage(props){
