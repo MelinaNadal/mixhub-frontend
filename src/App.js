@@ -3,6 +3,7 @@ import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import SearchPage from './pages/SearchPage';
 import { getUser, logout } from './services/userService';
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom'
 import { useEffect, useState } from 'react';
@@ -15,11 +16,11 @@ function App(props) {
 
   // helper functions
   function handleSignupOrLogin(){
-    console.log('1')
+    
     setUserState({ user:getUser()})
-    console.log('2')
+    
     props.history.push('./searchpage')
-    console.log('3')
+   
 
   }
 
@@ -46,6 +47,9 @@ function App(props) {
         }/>
         <Route exact path ='/signup' render={props=>
           <SignupPage handleSignupOrLogin={handleSignupOrLogin}/>
+        }/>
+        <Route exact path ='/searchpage' render={props=>
+          <SearchPage {...props}/>
         }/>
       </Switch>
     <Footer/>

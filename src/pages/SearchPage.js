@@ -1,14 +1,8 @@
 import { useState } from 'react';
-import { Link } from "react-router-dom";
 
 
-const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php'
 
 
-function fetchCocktailData(searchTerm) {
-   return fetch(BASE_URL + '?s=' + searchTerm)
-    .then(res => res.json())
-}
 export default function SearchPage(props){
     const [ formState, setFormState ] = useState({
         search:''
@@ -29,9 +23,15 @@ export default function SearchPage(props){
         setCocktailData(data)
         setFormState({
             search:''
-        })
+        })}
+        const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php'
+
+function getCocktails(searchTerm) {
+   return fetch(BASE_URL + '?s=' + searchTerm)
+    .then(res => res.json())
+}
         
-    }
+    
     return(
         <main className="Page">
             <form onSubmit={search}>
@@ -40,10 +40,10 @@ export default function SearchPage(props){
                 <input type="submit" value="Search"/>
                 </div>
             </form>
-                <div className="collection">
-                    {bookData.items && bookData.items.map((book,idx)=>
-                    <SearchedIngredient coctail={cocktail} key={idx}/>
-                    )}
+                <div className="Recipes">
+                    {cocktailData.items && cocktailData.items.map((cocktail, idx)=> (
+                    <recipe key={ingredient} />
+                    ),
                 </div>
         </main>
     )
