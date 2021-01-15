@@ -4,3 +4,5 @@ function fetchCocktailData(searchTerm) {
     .then(res => res.json())
 }
 
+export function getCocktails(i){
+    return fetch(BASE_URL+`${i}&maxResults=10`).then(res=>res.json())
