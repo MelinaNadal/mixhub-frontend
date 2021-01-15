@@ -1,6 +1,6 @@
 import { setToken, getUserFromToken, removeToken } from './tokenService';
 
-const BASE_URL = 'mongodb+srv://admin:abc1234@cluster0.nosg8.mongodb.net/project3?retryWrites=true&w=majority'
+const BASE_URL = 'https://cryptic-inlet-63339.herokuapp.com/'
 function signup(user) {
     return fetch(BASE_URL + '/signup', {
         method: 'POST',
