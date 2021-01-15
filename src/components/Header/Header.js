@@ -4,7 +4,7 @@ import './Header.css';
 export default function Header(props) {
     return (
         <header className="Header">
-            <h1></h1>
+            <h1>    </h1>
             <nav>
                 <ul className="NavLinks">
                 <li>{props.user && <Link to='' onClick={props.handleLogout}>Log Out</Link>}</li>
@@ -14,6 +14,7 @@ export default function Header(props) {
                  
                 </ul>
             </nav>
+        
         </header>
     );
 }

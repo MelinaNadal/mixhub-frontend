@@ -6,7 +6,7 @@ import SignupPage from './pages/SignupPage';
 import SearchPage from './pages/SearchPage';
 import { getUser, logout } from './services/userService';
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom'
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import './App.css';
 function App(props) {
   // app state 
